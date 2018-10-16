@@ -1,10 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
+
     <meta charset="utf-8">
-    <title>你好，GitHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
   </head>
-  <body>
-    <h1>覺得厲害</h1>
+
+  <body ng-app="demoApp">
+
+	<div ng-controller="demoController">
+	<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse black-gr">
+          <ul class="navbar-nav ml-auto">
+		    <li>
+			<img class="navbar-brand" src="https://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_300,w_300,f_auto,q_auto/v1/1315932/qsyjqmstesbfvrldqrfa.png">
+			</li>
+            <li class="nav-item active">
+              <a class="nav-link" ng-click="changeTopic(topics.recommendation)" href="#">{{topics.recommendation}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.envStory)" href="#">{{topics.envStory}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.envInfo)" href="#">{{topics.envInfo}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.mixApplication)" href="#">{{topics.mixApplication}}</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" target="_blank" href="http://entrance03.strikingly.com/2">{{topics.dataQuality}}</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.cooperation)" href="#">{{topics.cooperation}}</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.dataPlatform)" href="#">{{topic.dataPlatform}}</a>
+            </li><li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.ecpPublicInfo)" href="#">{{topics.ecpPublicInfo}}</a>
+            </li>
+			
+			<div class="dropdown nav-item">
+			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				關於我們
+			  </a>
+			  <div class="dropdown-menu black-gr">
+				<a class="dropdown-item nav-item black-gr" ng-click="changeTopic(topics.aboutUs.stage4Gov)" href="#">{{topics.aboutUs.stage4Gov}}</a>
+				<a class="dropdown-item nav-item black-gr" ng-click="changeTopic(topics.aboutUs.stage5Gov)" href="#">{{topics.aboutUs.stage5Gov}}</a>
+			  </div>
+			</div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Heading -->
+	  <div ng-show="nowTopic === topics.recommendation">
+		  <div style="text-align: center; padding: 2em">
+			  <h4 class="my-4">數字看環境，大家看到了什麼</h4>
+			  <h5>結環境資料創新應用服務</h5>
+		  </div>
+		 
+		  
+		  <!-- Portfolio Item Row -->
+		  <div class="row" style="padding: 1.2em">
+
+			<div class="col-md-8">
+			  <img class="img-fluid" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_60/v1/1315932/A1_fvz6ry.gif" alt="">
+			</div>
+
+			<div class="col-md-4">
+			  <h3 class="my-3">島嶼生林</h3>
+			  <p><span class="bolder-txt">永續的森林，</span>森林是有機的生命體，也是人類生存的重要資源，在維護生物多樣性的前提下，永續經營森林，確保森林生態系服務價值並分享其惠益，以促進環境、經濟及社會之福祉。</p>
+			  <p><span class="bolder-txt">我們的里山，</span>從里山倡議開始，逐步找回人與土地的連結與認同，重建里山、里海生活的樣貌，編織「森、里、川、海」的國土生態保育綠色網絡，使臺灣的生態、農業與地景永續共榮。</p>
+			  <p><span class="bolder-txt">探索臺灣的森林，</span>山脈群峰們保護著島嶼上的人們，而森林，則是這些神山們堅強的外衣，一起上山來看看吧！
+			  </p>
+			</div>
+
+		  </div>
+	  </div>
+
+	  <div ng-show="nowTopic === topics.recommendation
+	  || nowTopic === topics.envStory 
+	  || nowTopic === topics.envInfo
+	  || nowTopic === topics.cooperation
+	  || nowTopic === topics.mixApplication">
+		  <div ng-show="nowTopic !== topics.recommendation" style="text-align: center">
+			<h1 class="my-3" style="padding: 2em">
+			{{nowTopic}}
+			<p style="padding-top: 1.2em"><small>Thoughts, musings, and ruminations.</small></p>
+			</h1>
+		  </div>
+		  <div class="row">
+			<div class="col-md-3 col-sm-6 mb-4" ng-repeat="(key, card) in cardArr" style="padding: 1.2em">
+			  <strong>{{card.title}}</strong>
+			  <a ng-href="{{card.link}}" target="_blank">
+				<img class="img-fluid" ng-src="{{card.image}}"  alt="{{card.description}}">
+			  </a>
+			</div>
+		  </div>
+	  </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+	<div class="container">
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#">About Us</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">信息</a></div>
+			<div class="col"><p class="m-0 text-center text-white">聯繫我們</p></div>
+
+		  </div>
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#">Our Mission</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">幫助文檔</a></div>
+			<div class="col"><p class="m-0 text-center text-white">我們期待收到你的來信</p></div>
+		  </div>
+		  
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#">We're Hiring!</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">品牌優勢</a></div>
+			<div class="col"><p class="m-0 text-center text-white">321-555-5555</p></div>
+		  </div>
+		  
+		  <div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"><p class="m-0 text-center text-white">info@company.com</p></div>
+		  </div>
+		  <hr class="style">
+		  <div class="row"><p class="m-0 text-center text-white"><small>Cracio-app © 2018<small></p></div>
+	  </div>
+      <!-- /.container -->
+    </footer>
+	</div>
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+	<script src="vendor/demo.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+    
   </body>
+
 </html>
