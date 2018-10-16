@@ -68,15 +68,50 @@
         </div>
       </div>
     </nav>
+	<div style="padding-top: 15px;padding-left: 150px;white-space: nowrap;font-size: 30%;background-color: #010101;color: white;">
+		<a ng-click="changeTopic(topics.recommendation)" href="#" style="padding-right: 0.8em;">首頁</a> 
+		<span style="padding-right: 0.8em;">></span>
+		<span ng-show="nowTopic === topics.aboutUs.stage4Gov
+		|| nowTopic === topics.aboutUs.stage5Gov" style="padding-right: 0.8em;"><a href="#" style="padding-right: 0.8em;">關於我們</a>>>></span>
+		<a ng-click="changeTopic(nowTopic)" href="#">{{nowTopic}}</a>
+	</div>
 
+  <header style="height: 400px;background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image: url(&quot;./images/photo.jpg&quot;);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4">環境資訊入口網</h1>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Page Content -->
     <div class="container">
-
       <!-- Portfolio Item Heading -->
 	  <div ng-show="nowTopic === topics.recommendation">
 		  <div style="text-align: center; padding: 2em">
 			  <h4 class="my-4">數字看環境，大家看到了什麼</h4>
-			  <h5>結環境資料創新應用服務</h5>
+			  <h5>環境資料創新應用服務</h5>
 		  </div>
 		 
 		  
@@ -110,13 +145,23 @@
 			</h1>
 		  </div>
 		  <div class="row">
-			<div class="col-md-3 col-sm-6 mb-4" ng-repeat="(key, card) in cardArr" style="padding: 1.2em">
-			  <strong>{{card.title}}</strong>
+			<div class="col-md-3 col-sm-6 mb-4" ng-repeat="(key, card) in cardArr" style="padding: 1.2em" ng-show="$index< 8 || alreadyClickCards">
 			  <a ng-href="{{card.link}}" target="_blank">
-				<img class="img-fluid" ng-src="{{card.image}}"  alt="{{card.description}}">
+				<img class="img-fluid" ng-src="{{card.image}}"  alt="{{card.description}}" style="padding-bottom: 0.8em; width:100%">
+				<strong>{{card.title}}</strong>
+				<p style="padding-top: 1.2em; padding-bottom: 0.3em">{{card.description}}</p>
+				<small style="position:absolute; bottom:0.5em; right: 1em; text-decoration: underline;">詳細閱讀...</small>
 			  </a>
 			</div>
 		  </div>
+		  <div style="text-align: center; padding: 2em;">
+				<button class="btn btn-info" ng-hide="alreadyClickCards" ng-click="alreadyClickCards=true;">閱讀更多</button>
+		  </div>
+	  </div>
+	  <div ng-show="nowTopic === topics.ecpPublicInfo
+	  || nowTopic === topics.aboutUs.stage4Gov
+	  || nowTopic === topics.aboutUs.stage5Gov">
+			<div style="font-size: 200%; padding-top:5em; padding-left: 15em; padding-bottom: 10em">{{nowTopic}}</div>
 	  </div>
 
 
@@ -138,18 +183,18 @@
 		  </div>
 		  
 		  <div class="row">
-			<div class="col"><a class="m-0 text-center text-white" href="#">We're Hiring!</a></div>
-			<div class="col"><a class="m-0 text-center text-white" href="#">品牌優勢</a></div>
-			<div class="col"><p class="m-0 text-center text-white">321-555-5555</p></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><p class="m-0 text-center text-white"></p></div>
 		  </div>
 		  
 		  <div class="row">
 			<div class="col"></div>
 			<div class="col"></div>
-			<div class="col"><p class="m-0 text-center text-white">info@company.com</p></div>
+			<div class="col"><p class="m-0 text-center text-white"></p></div>
 		  </div>
 		  <hr class="style">
-		  <div class="row"><p class="m-0 text-center text-white"><small>Cracio-app © 2018<small></p></div>
+		  <div class="row"><p class="m-0 text-center text-white"><small><small></p></div>
 	  </div>
       <!-- /.container -->
     </footer>
