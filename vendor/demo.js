@@ -7,6 +7,7 @@
 			$scope.nowTopic = topic;
 		};
 		
+	
 		$scope.init = function(){
 			$scope.cardList = getCards();
 			$scope.cardArr = [];
@@ -24,8 +25,8 @@
 					'stage5Gov': '第五階段政府'
 				}
 			};
-			$scope.nowTopic = $scope.topics.envStory;
-			
+			$scope.nowTopic = $scope.topics.recommendation;
+			$scope.alreadyClickCards = false;
 			angular.forEach($scope.cardList, function(value, key){
 				if(!value.image){
 					value.image = "https://upload.wikimedia.org/wikipedia/commons/6/6c/No_image_3x4.svg";
@@ -41,7 +42,7 @@
 		return {
 			"card1":{
 				"title": "環境地質好簡單，檢索自己來",
-				"description": "",
+				"description": "環境地質好簡單，檢索自己來環境地質好簡單，檢索自己來環境地質好簡單，檢索自己來環境地質好簡單，檢索自己來環境地質好簡單，檢索自己來環境地質好簡單，檢索自己來環境地質好簡單，檢索自己來環境地質好簡單，檢索自己來",
 				"link": "https://docs.google.com/document/d/e/2PACX-1vTco3PAYde7mkWjLV6ls-AKA7oscnGdOQVXZgzTGMJfdCyHmeOJDp9cg5n1LOlrYSgNL30rEk3yanFR/pub",
 				"image": "https://lh4.googleusercontent.com/NtlpZBeVn5jWbayEVAiAfj2-iuxbV_VMPtmPhdB8jAb9D2vVgTvqvM6nGQ_HAUG3wSsgfevdiMA9P7Iw4Fekm66I92Yt2d1HPGfsJq0UPpiUBue-rb2cE_sIutFNrOVy2L-LCW8O"
 			},
