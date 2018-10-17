@@ -106,7 +106,7 @@
 				"image": "https://lh6.googleusercontent.com/3DJNZ7NrHTrceWlPHKEyyR3pYSKz_i5cA2br_Dk8bJ7dRoxkPuP5r4Rxjom0ZlV-G9_vN87Ei8OZsqn20B1EpjfhfkEbHBkhOGDzgnEJ-y6y7ArjbLF0Iy1LNWBfsFPDzjEDX9QS"
 			},"card13":{
 				"title": "水資料工作坊種子教師找的就是您",
-				"description": "",
+				"description": "匯集眾人之智慧創意無邊界水問題之主題及開發需求，可利用相關開放資料或混搭其他政府機關或民間開放資料或公開資料進行創作，透過挖掘、重組、混搭等方式，發展出結合具創新性價值之作品或服務。",
 				"link": "https://docs.google.com/document/d/e/2PACX-1vSyzi9mzy-54j2pIlPcTACKk_uG-GpkaGg1ZeSJnSXU9UA4w44cQAfhnqut2G7hW3OGKiUS39hpWcg-/pub",
 				"image": "https://lh4.googleusercontent.com/itVPfojzgVmzs3nTIlQeQVJCFw-2JXWTtGG6b6nIXKkzXWRllJWYf97RpZILxw6nuAQhthtyHow8z1BsfOaxjdZu4O70HSTMR1USQ98tgWVFjKzyl_1Ntk9Vy9O5upTw1iCDcgHn"
 			},"card14":{
@@ -159,6 +159,25 @@
 				"description": "",
 				"link": "https://docs.google.com/document/d/e/2PACX-1vSET3_fOdOemuxxjYeLGxCt1Wmj5a_i_Se1bT-pKzyVqa88Ie2qnM9HfftgJ5FckVHh3gwCrW08zDFz/pub",
 				"image": ""
+			}
+            
+            ,"card24":{
+				"title": "物聯網建布使汙染無所遁形",
+				"description": "",
+				"link": "https://docs.google.com/document/d/e/2PACX-1vTBRFlzyxSCE0NdtcAe4GYs8H7SvJO_SrDAUKMMQw0Mv4NOEqLwTSPKs-eXa4SlcyVKAVaH0heosBVp/pub",
+				"image": "https://lh3.googleusercontent.com/ujyPKc_uM2h4Z6Ot1t-5XGoSJOzrE3av_h6w3-hF5GZC6azInY7OKsRSPae0j8ZVjrxTaeCorKzOrBQ4OCcVpL83ITu7z4GM_ZqsJcgu2fFnQn2s4IyBpqtpmmy8wYsl1t7pzxJa"
+			}
+            ,"card25":{
+				"title": "推動智慧城市，不可不知物聯網的重要",
+				"description": "",
+				"link": "https://docs.google.com/document/d/e/2PACX-1vRHn_VHskbhPtHzm1egcmAdWKMjvnA2DfGrXIznuDMfUd0cO5eEvHR_HOgn8DHl6G4nYBjmS6ZaT_A9/pub",
+				"image": "https://lh3.googleusercontent.com/1_3c3G24Ye51QK6hwV6fCMTDc5_gvG2Zf-VGaSHM4QzOzs8T85uONgLXsX3ThJLtBC7PxwFBicJ5Fo31DBMsm-_MgI4Qq6TajA1Wx1pCYrdCsRNc3xcjR_uZZT8h27THGJWVJvgq"
+			}
+            ,"card26":{
+				"title": "空品風險一把罩，避開空污好重要",
+				"description": "",
+				"link": "https://docs.google.com/document/d/e/2PACX-1vRmzxh1FjycGz-DK6dm5ACqIrryIbxjyDH_bfjxfEfXsrOYeNnNoGNcqNleswoZeMRlYN-zYietCIIm/pub",
+				"image": "https://lh4.googleusercontent.com/jBXPjWJ-1wTIX-q6lTZYtsal-aOai3LTsyFC9_6xke_ZC6kD9BtZPfvbv1jg7nFmokSdfwHxBHeff4uP_uWdPeB-tRVItS8CJ1QOZ1wPWGSAMe9pg4m8cMFOckdZw0JlVSAZUVYj"
 			}
 		}
 	};
