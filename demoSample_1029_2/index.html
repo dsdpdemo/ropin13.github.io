@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/portfolio-item.css" rel="stylesheet">
+  </head>
+
+  <body ng-app="demoApp">
+
+	<div ng-controller="demoController">
+	<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse black-gr">
+          <ul class="navbar-nav ml-auto">
+		    <li>
+			<img class="navbar-brand" src="https://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_300,w_300,f_auto,q_auto/v1/1315932/qsyjqmstesbfvrldqrfa.png">
+			</li>
+            <li class="nav-item active">
+              <a class="nav-link" ng-click="changeTopic(topics.recommendation)" href="#">{{topics.recommendation}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.envStory)" href="#">{{topics.envStory}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.envInfo)" href="#">{{topics.envInfo}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.mixApplication)" href="#">{{topics.mixApplication}}</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" target="_blank" href="http://entrance03.strikingly.com/2">{{topics.dataQuality}}</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.cooperation)" href="#">{{topics.cooperation}}</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.dataPlatform)" href="#">{{topic.dataPlatform}}</a>
+            </li><li class="nav-item">
+              <a class="nav-link" ng-click="changeTopic(topics.ecpPublicInfo)" href="#">{{topics.ecpPublicInfo}}</a>
+            </li>
+			
+			<div class="dropdown nav-item">
+			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				關於我們
+			  </a>
+			  <div class="dropdown-menu black-gr">
+				<a class="dropdown-item nav-item black-gr" ng-click="changeTopic(topics.aboutUs.stage4Gov)" href="#">{{topics.aboutUs.stage4Gov}}</a>
+				<a class="dropdown-item nav-item black-gr" ng-click="changeTopic(topics.aboutUs.stage5Gov)" href="#">{{topics.aboutUs.stage5Gov}}</a>
+			  </div>
+			</div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	<div style="padding-top: 15px;padding-left: 150px;white-space: nowrap;font-size: 30%;background-color: #010101;color: white;">
+		<a ng-click="changeTopic(topics.recommendation)" href="#" style="padding-right: 0.8em;">首頁</a> 
+		<span style="padding-right: 0.8em;">></span>
+		<span ng-show="nowTopic === topics.aboutUs.stage4Gov
+		|| nowTopic === topics.aboutUs.stage5Gov" style="padding-right: 0.8em;"><a href="#" style="padding-right: 0.8em;">關於我們</a>>>></span>
+		<a ng-click="changeTopic(nowTopic)" href="#">{{nowTopic}}</a>
+	</div>
+
+  <header  ng-show="nowTopic === topics.recommendation" style="height: 400px;background-repeat: no-repeat; background-size: cover; background-color: transparent; background-position: 50% 50%; background-image: url(&quot;./images/photo.jpg&quot;);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4">環境資訊入口網</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Portfolio Item Heading -->
+	  <div ng-show="nowTopic === topics.recommendation">
+		  <div style="text-align: center; padding: 2em">
+			  <h4 class="my-4">數字看環境，大家看到了什麼</h4>
+			  <h5>環境資料創新應用服務</h5>
+		  </div>
+		 
+		  
+		  <!-- Portfolio Item Row -->
+		  <div class="row" style="padding: 1.2em">
+
+			<div class="col-md-8">
+			  <img class="img-fluid" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_60/v1/1315932/A1_fvz6ry.gif" alt="">
+			</div>
+
+			<div class="col-md-4">
+			  <h3 class="my-3">島嶼生林</h3>
+			  <p><span class="bolder-txt">永續的森林，</span>森林是有機的生命體，也是人類生存的重要資源，在維護生物多樣性的前提下，永續經營森林，確保森林生態系服務價值並分享其惠益，以促進環境、經濟及社會之福祉。</p>
+			  <p><span class="bolder-txt">我們的里山，</span>從里山倡議開始，逐步找回人與土地的連結與認同，重建里山、里海生活的樣貌，編織「森、里、川、海」的國土生態保育綠色網絡，使臺灣的生態、農業與地景永續共榮。</p>
+			  <p><span class="bolder-txt">探索臺灣的森林，</span>山脈群峰們保護著島嶼上的人們，而森林，則是這些神山們堅強的外衣，一起上山來看看吧！
+			  </p>
+			</div>
+
+		  </div>
+	  </div>
+
+	  <div ng-show="nowTopic === topics.recommendation
+	  || nowTopic === topics.envStory 
+	  || nowTopic === topics.envInfo
+	  || nowTopic === topics.cooperation
+	  || nowTopic === topics.mixApplication">
+			<div class="row" id="cards">
+				<div class="col-md-3 col-sm-6 mb-4" ng-repeat="(key, card) in cardArr" ng-show="$index< 8 || alreadyClickCards">
+			   <a target="_blank" ng-href="{{card.link}}" class="card show" "="" data-blink-id="aecet83c1t8m85mi26420d" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(&quot;{{card.image}}&quot;);">
+			      <p class="card-param-1"></p>
+			      <p class="card-param-2"></p>
+			      <div class="info">
+			         <h2 class="card-title">{{card.title}}</h2>
+			         <p class="card-description"></p>
+			      </div>
+			   </a>
+			　</div>
+			</div>
+		  <div style="text-align: center; padding: 2em;">
+				<button class="btn btn-info" ng-hide="alreadyClickCards" ng-click="alreadyClickCards=true;">閱讀更多</button>
+		  </div>
+	  </div>
+	  <div ng-show="nowTopic === topics.ecpPublicInfo
+	  || nowTopic === topics.aboutUs.stage4Gov
+	  || nowTopic === topics.aboutUs.stage5Gov">
+			<div style="font-size: 200%; padding-top:5em; padding-left: 15em; padding-bottom: 10em">{{nowTopic}}</div>
+	  </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+	<div class="container">
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white">認識我們</a></div>
+			<div class="col"><a class="m-0 text-center text-white">動態資訊</a></div>
+			<div class="col"><a class="m-0 text-center text-white">環境雲資訊公開</a></div>
+			<div class="col"><a class="m-0 text-center text-white">機關專區</a></div>
+			<div class="col"><a class="m-0 text-center text-white">關於本站</a></div>
+
+		  </div>
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#">第四階段電子化政府</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">歷年紀事</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">執行報告</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">環境保護署</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">常見問題</a></div>
+		  </div>
+		  
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#">第五階段電子化政府</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">推廣訊息</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">相關網站</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">水利署</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">網站導覽</a></div>
+		  </div>
+		  
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">相關APP</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">水土保持局</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">機關連結</a></div>
+		  </div>
+          
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">公眾加值應用</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">中央地質調查所</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+		  </div>
+          
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">特生中心</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+		  </div>
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">礦物局</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+		  </div>
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">林務局</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+		  </div>
+		  <div class="row">
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#">中央氣象局</a></div>
+			<div class="col"><a class="m-0 text-center text-white" href="#"></a></div>
+		  </div>
+		  <div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"><p class="m-0 text-center text-white"></p></div>
+		  </div>
+		  <hr class="style">
+		  <div class="row"><p class="m-0 text-center text-white"><small><small></p></div>
+	  </div>
+      <!-- /.container -->
+    </footer>
+	</div>
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="vendor/card.js"></script>
+	<script src="./vendor/demo.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+    
+  </body>
+
+</html>
