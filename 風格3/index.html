@@ -1,0 +1,21 @@
+<img id="im" src="../images/18-1107入口頁_C.png" width="100%"/>
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+大圖：
+<br/><br/>
+<script type="text/javascript" src="../jquery.min.js"></script> 
+<div id="mydiv" style="overflow:auto; overflow-y:hidden;width:100%">
+   <img id="im" src="../images/18-1107入口頁_C.png" />
+</div>
+<script type="text/javascript"> 
+var outer=document.getElementById('mydiv').offsetWidth
+var inner=document.getElementById('im').offsetWidth;
+console.log(inner);
+$('#mydiv').scrollLeft((inner-outer)/2);
+
+</script>
